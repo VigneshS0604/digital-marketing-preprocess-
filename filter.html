@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Light gray background */
+            color: #333; /* Dark gray text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff; /* White container background */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            padding: 30px;
+            width: 400px;
+            text-align: center;
+        }
+        h2 {
+            color: #6A5ACD; /* Violet heading */
+            margin-bottom: 20px;
+        }
+        p {
+            margin-top: 20px;
+        }
+        a {
+            background-color: #6A5ACD; /* Violet background */
+            color: #fff; /* White text */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #483D8B; /* Darker violet color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Filtered Data</h2>
+        <a href="/download-filtered/{{ filename }}">Download Filtered Data</a>
+    </div>
+</body>
+</html>

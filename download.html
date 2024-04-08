@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download and Filter Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Light gray background */
+            color: #333; /* Dark gray text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff; /* White container background */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            padding: 30px;
+            width: 400px;
+            text-align: center;
+        }
+        h2 {
+            color: #6A5ACD; /* Violet heading */
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #f1f3f5; /* Lighter gray background */
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Inner shadow */
+            transition: background-color 0.3s;
+        }
+        input[type="text"]:focus {
+            background-color: #e9ecef; /* Light gray background on focus */
+        }
+        input[type="submit"] {
+            background-color: #6A5ACD; /* Violet background */
+            color: #fff; /* White text */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #483D8B; /* Darker violet color on hover */
+        }
+        p {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Download Processed Data</h2>
+        <form action="/download" method="get">
+            <input type="hidden" name="filename" value="{{ filename }}">
+            <button type="submit">Download Preprocessed Data</button>
+        </form>
+        <p>Processed data has been downloaded successfully.</p>
+        <hr>
+        <h2>Filter Data</h2>
+        <form action="/filter" method="post">
+            <label for="day">Enter the day you want to filter (e.g., Mon, Tue, Wed):</label>
+            <input type="text" id="day" name="day" placeholder="Enter day...">
+            <br>
+            <input type="submit" value="Filter">
+        </form>
+        </div>
+</body>
+</html>
